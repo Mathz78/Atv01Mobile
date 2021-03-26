@@ -28,5 +28,28 @@
     <TextView
         android:id="@+id/resultName"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginTop="50px" />
+
+    <TextView
+        android:id="@+id/resultAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginTop="50px" />
+
+    <TextView
+        android:id="@+id/resultPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginTop="50px" />
+
+    <TextView
+        android:id="@+id/resultEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginTop="50px" />
 </androidx.appcompat.widget.LinearLayoutCompat>

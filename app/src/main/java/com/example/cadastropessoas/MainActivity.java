@@ -12,7 +12,10 @@ public class MainActivity extends AppCompatActivity {
     private Button saveButton;
     private EditText inputName, inputAddress, inputPhone, inputEmail;
 
-    public static final String SEND_MESSAGE = "RESULT";
+    public static final String sendName = "name";
+    public static final String sendAddress = "address";
+    public static final String sendPhone = "phone";
+    public static final String sendEmail = "email";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         String resultName = name.getText().toString();
         String resultAddress = address.getText().toString();
-        String resulPhone = phone.getText().toString();
-        String resulEmail = email.getText().toString();
+        String resultPhone = phone.getText().toString();
+        String resultEmail = email.getText().toString();
 
-        it.putExtra(SEND_MESSAGE, resultName);
+        it.putExtra(sendName, resultName);
+        it.putExtra(sendAddress, resultAddress);
+        it.putExtra(sendPhone, resultPhone);
+        it.putExtra(sendName, resultEmail);
+
         startActivity(it);
     }
 }

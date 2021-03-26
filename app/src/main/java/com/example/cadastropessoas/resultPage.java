@@ -8,18 +8,29 @@ import android.widget.TextView;
 
 public class resultPage extends AppCompatActivity {
 
-    private String result;
-    private TextView textView;
+    private String resultName, resultAddress, resultPhone, resultEmail;
+    private TextView textViewName, textViewAddress, textViewPhone, textViewEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_page);
 
-        textView = (TextView) findViewById(R.id.resultName);
-        Intent it = getIntent();
-        result = it.getStringExtra("RESULT");
+        textViewName = (TextView) findViewById(R.id.resultName);
+        textViewAddress = (TextView) findViewById(R.id.resultAddress);
+        textViewPhone = (TextView) findViewById(R.id.resultPhone);
+        textViewEmail = (TextView) findViewById(R.id.resultEmail);
 
-        textView.setText(result);
+        Intent it = getIntent();
+
+        resultName = it.getStringExtra("name");
+        resultAddress = it.getStringExtra("address");
+        resultPhone = it.getStringExtra("phone");
+        resultEmail = it.getStringExtra("email");
+
+        textViewName.setText(resultName);
+        textViewAddress.setText(resultAddress);
+        textViewPhone.setText(resultPhone);
+        textViewEmail.setText(resultEmail);
     }
 }
